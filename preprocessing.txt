@@ -1,0 +1,94 @@
+df["amd"] = df["Cpu"].str.contains(r'\bamd\b' , case = False , na = False).astype(int)
+df["intel"] = df["Cpu"].str.contains(r'\bintel\b' , case = False , na = False).astype(int)
+def cpu_category(cpu):
+    cpu = str(cpu).lower()
+    
+    # based on my research these are the keywords for the high end cpus
+    if any(x in cpu for x in ['i7', 'i9', 'xeon', 'hq', 'hk', 'ryzen 7', 'ryzen 9', 'fx']):
+        return 'high'
+    
+    # these are the mid ones 
+    elif any(x in cpu for x in ['i5', 'i3', 'ryzen 3', 'ryzen 5', 'a8', 'a10', 'a12']):
+        return 'mid'
+    
+    # rest of them are going to be considered as budget 
+    else:
+        return 'budget'
+
+df['cpu_range'] = df['Cpu'].apply(cpu_category)
+
+import re
+
+def gpu_rank(gpu):
+    gpu = str(gpu).lower()
+    
+    # INTEL  == always the low budget ones
+    if 'intel' in gpu:
+        return 5
+    
+    # NVIDIA
+    if 'nvidia' in gpu or 'geforce' in gpu:
+        
+        # RTX cards ... well 40 
+        #and 50 series cards are expensive and we dont have 
+        #the enough data to predict the 40 and 50 series laptop's price so im ignoring those cards
+        if 'rtx' in gpu:
+            num = re.findall(r'\d{2,3}', gpu)
+            if num:
+                last_two = int(num[0]) % 100
+                
+                if last_two >= 80: return 1
+                elif last_two >= 70: return 2
+                elif last_two >= 60: return 3
+                elif last_two >= 50: return 4
+            return 2  # default RTX
+        
+        # GTX cards
+        if 'gtx' in gpu:
+            num = re.findall(r'\d{1,9}', gpu)
+            if num:
+                last_two = int(num[0]) % 100
+                
+                if last_two >= 80: return 1
+                elif last_two >= 70: return 2
+                elif last_two >= 60: return 3
+                elif last_two >= 50: return 4
+                elif last_two >= 40: return 5
+                elif last_two >= 30: return 5
+        
+        # MX and GT are the low ones .. coz i was a gt user back then :( i know the pain
+        if 'mx' in gpu or 'gt' in gpu:
+            return 5
+        
+        if 'quadro' in gpu:
+            return 1
+        
+        return 5
+    
+    # AMD i am unsure of AMD cards coz i ve nver been an AMD consumer so based on our data. so i admit that my model works the best with the Nvidia cards
+    if 'amd' in gpu or 'radeon' in gpu:
+        
+        if 'rx' in gpu:
+            num = re.findall(r'\d{5}', gpu)
+            if num:
+                last_two = int(num[0]) % 100
+                
+                if last_two >= 80: return 1
+                elif last_two >= 90: return 1
+                elif last_two >= 70: return 2
+                elif last_two >= 60: return 3
+                elif last_two >= 50: return 4
+        
+        # Old R series
+        if 'r7' in gpu: return 3
+        if 'r5' in gpu: return 4
+        if 'r3' in gpu: return 5
+        if 'r2' in gpu: return 5
+        if 'r4' in gpu: return 5
+
+        if 'firepro' in gpu: return 1
+        
+        return 4
+    
+    return 5
+
