@@ -1,1 +1,149 @@
 [2026-05-16 13:56:10,057: INFO: main: Starting the main.py file]
+[2026-05-17 14:02:36,279: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-17 14:02:36,281: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-17 14:02:36,283: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-17 14:02:36,284: INFO: common: created directory at: artifacts]
+[2026-05-17 14:02:36,285: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-17 14:02:37,933: INFO: 251335794: artifacts/data_ingestion/laptopData.csv download! with following info: 
+Date: Sun, 17 May 2026 08:32:42 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With
+x-repository-download: git clone https://github.com/Hemachander002/datasets.git
+x-raw-download: https://raw.githubusercontent.com/Hemachander002/datasets/main/laptopData.csv
+ETag: W/"ec8c1d5ffa9594b3e7e517838f14f481"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com explore-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Server: github.com
+Accept-Ranges: bytes
+Set-Cookie: _gh_sess=%2BgXEBBiv%2BwXez7qkD%2BU%2Fwevs%2F41bKbsdh%2Fo1DJl62gYxqC46vRmQrm35ysOfBf0WOeB%2FV%2Fu9XUcOlxePR3S1FOFg0xBhYEmm4xejLbeZMm1sp4Kgnf80po%2BBV8xCgo7hFfxnBE%2Fqn%2Fzd%2Fz9CceYxag6XbabnV0F21WceYcNU876EGov19Ee7w%2B6TghSsnWM7mQmoTfvMqtmfgxDnC7DzjIUdavO4bnw65H7aa%2BpwSwSDFHtlkRGgznXa6DN2ZRCV92bepJ62i%2FSNFLYhSSLjSA%3D%3D--CiSwD1NOtiCa9ynD--MZl6lVfB29buOvYsd8VCTg%3D%3D; path=/; HttpOnly; secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1869999010.1779006761; expires=Mon, 17 May 2027 08:32:41 GMT; domain=.github.com; path=/; secure; SameSite=Lax
+Set-Cookie: logged_in=no; expires=Mon, 17 May 2027 08:32:41 GMT; domain=.github.com; path=/; HttpOnly; secure; SameSite=Lax
+X-GitHub-Request-Id: 4010:298FF4:15EA862:1B6AB8D:6A097D29
+connection: close
+Transfer-Encoding: chunked
+
+]
+[2026-05-18 00:49:13,815: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 00:49:13,836: ERROR: main: DataIngestionTrainingPipeline.DataIngestionTrainingPipeline() takes 0 positional arguments but 1 was given]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 8, in <module>
+    obj.DataIngestionTrainingPipeline()
+TypeError: DataIngestionTrainingPipeline.DataIngestionTrainingPipeline() takes 0 positional arguments but 1 was given
+[2026-05-18 00:50:49,188: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 00:50:49,188: ERROR: main: DataIngestionTrainingPipeline.InitiateDataIngestionTrainingPipeline() takes 0 positional arguments but 1 was given]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 8, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+TypeError: DataIngestionTrainingPipeline.InitiateDataIngestionTrainingPipeline() takes 0 positional arguments but 1 was given
+[2026-05-18 00:52:06,426: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 00:52:06,426: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 01:01:05,869: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 01:01:05,869: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 01:05:04,126: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 01:05:04,126: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 01:08:30,759: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 01:08:30,760: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 01:09:25,102: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-18 01:09:25,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-18 01:09:25,115: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-18 01:09:25,116: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-18 01:09:25,117: INFO: common: created directory at: artifacts]
+[2026-05-18 01:09:25,117: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-18 01:09:26,942: INFO: data_ingestion: artifacts/data_ingestion/laptopData.csv download! with following info: 
+Date: Sun, 17 May 2026 19:39:31 GMT
+Content-Type: text/html; charset=utf-8
+Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With
+x-repository-download: git clone https://github.com/Hemachander002/datasets.git
+x-raw-download: https://raw.githubusercontent.com/Hemachander002/datasets/main/laptopData.csv
+ETag: W/"d458f551ad4b1b3dad35930694006d83"
+Cache-Control: max-age=0, private, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+X-Frame-Options: deny
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Referrer-Policy: no-referrer-when-downgrade
+Content-Security-Policy: default-src 'none'; base-uri 'self'; child-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/; connect-src 'self' uploads.github.com www.githubstatus.com collector.github.com raw.githubusercontent.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com *.rel.tunnels.api.visualstudio.com wss://*.rel.tunnels.api.visualstudio.com github.githubassets.com objects-origin.githubusercontent.com copilot-proxy.githubusercontent.com proxy.individual.githubcopilot.com proxy.business.githubcopilot.com proxy.enterprise.githubcopilot.com *.actions.githubusercontent.com wss://*.actions.githubusercontent.com productionresultssa0.blob.core.windows.net productionresultssa1.blob.core.windows.net productionresultssa2.blob.core.windows.net productionresultssa3.blob.core.windows.net productionresultssa4.blob.core.windows.net productionresultssa5.blob.core.windows.net productionresultssa6.blob.core.windows.net productionresultssa7.blob.core.windows.net productionresultssa8.blob.core.windows.net productionresultssa9.blob.core.windows.net productionresultssa10.blob.core.windows.net productionresultssa11.blob.core.windows.net productionresultssa12.blob.core.windows.net productionresultssa13.blob.core.windows.net productionresultssa14.blob.core.windows.net productionresultssa15.blob.core.windows.net productionresultssa16.blob.core.windows.net productionresultssa17.blob.core.windows.net productionresultssa18.blob.core.windows.net productionresultssa19.blob.core.windows.net github-production-repository-image-32fea6.s3.amazonaws.com github-production-release-asset-2e65be.s3.amazonaws.com insights.github.com wss://alive.github.com wss://alive-staging.github.com api.githubcopilot.com api.individual.githubcopilot.com api.business.githubcopilot.com api.enterprise.githubcopilot.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com copilot-workspace.githubnext.com objects-origin.githubusercontent.com; frame-ancestors 'none'; frame-src viewscreen.githubusercontent.com notebooks.githubusercontent.com; img-src 'self' data: blob: github.githubassets.com media.githubusercontent.com camo.githubusercontent.com identicons.github.com avatars.githubusercontent.com private-avatars.githubusercontent.com github-cloud.s3.amazonaws.com objects.githubusercontent.com release-assets.githubusercontent.com secured-user-images.githubusercontent.com user-images.githubusercontent.com private-user-images.githubusercontent.com opengraph.githubassets.com marketplace-screenshots.githubusercontent.com copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/ github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com explore-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com secured-user-images.githubusercontent.com private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com github.githubassets.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.githubassets.com github.com/assets-cdn/worker/ github.com/assets/ gist.github.com/assets-cdn/worker/
+Server: github.com
+Accept-Ranges: bytes
+Set-Cookie: _gh_sess=aFhRiEonkEuAZP2wZlG0%2FfOQDY9aNcjydOG8YctdxywnNSRfNl5cpOql4QRruSkrYlSbc%2BHSJcMXmlH%2BYdWFFcWAQlsY0owUz9gN77PJds3ozsbvcNiOQ%2BcBXqh%2Fs9FLTQZp64wdmBEUOFRZGLb8drtIT6n1oZnKkhk84tZ3nHebfd96wkUHLTrdR4%2B1enreM1c4hzPdIRFqg0KbFLxlp0%2B05hKRvxyd7qrbDSwdBs0bIAyj9k%2FiurHGXLEYpZo%2FqWfmGD%2BzV%2B596xKUAMncWw%3D%3D--C2QiE5GEID0AupgG--1RTZFqjsQNUT1k4P2tEAOQ%3D%3D; path=/; HttpOnly; secure; SameSite=Lax
+Set-Cookie: _octo=GH1.1.1097290084.1779046770; expires=Mon, 17 May 2027 19:39:30 GMT; domain=.github.com; path=/; secure; SameSite=Lax
+Set-Cookie: logged_in=no; expires=Mon, 17 May 2027 19:39:30 GMT; domain=.github.com; path=/; HttpOnly; secure; SameSite=Lax
+X-GitHub-Request-Id: 7277:2E08B2:1D56466:2465D80:6A0A1972
+connection: close
+Transfer-Encoding: chunked
+
+]
+[2026-05-18 01:09:26,942: ERROR: main: File is not a zip file: artifacts/data_ingestion/laptopData.csv]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 8, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_ingestion_pipeline.py", line 17, in InitiateDataIngestionTrainingPipeline
+    data_ingestion.extract_zip_file()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_ingestion.py", line 29, in extract_zip_file
+    raise Exception(f"File is not a zip file: {self.config.local_data_file}")
+Exception: File is not a zip file: artifacts/data_ingestion/laptopData.csv
+[2026-05-18 15:45:44,769: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-18 15:45:44,779: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-18 15:45:44,779: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-18 15:45:44,780: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-18 15:45:44,781: INFO: common: created directory at: artifacts]
+[2026-05-18 15:45:44,781: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-18 15:45:44,790: ERROR: data_validation: 'str' object has no attribute 'keys']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 18, in validate_data
+    expected_columns = set(self.config.all_schema.keys())
+AttributeError: 'str' object has no attribute 'keys'
+[2026-05-18 15:45:44,790: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 15:48:10,935: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-18 15:48:10,939: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-18 15:48:10,939: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-18 15:48:10,941: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-18 15:48:10,941: INFO: common: created directory at: artifacts]
+[2026-05-18 15:48:10,941: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-18 15:48:10,950: ERROR: data_validation: 'str' object has no attribute 'keys']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 18, in validate_data
+    expected_columns = set(self.config.all_schema.keys())
+AttributeError: 'str' object has no attribute 'keys'
+[2026-05-18 15:48:10,950: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 15:58:34,664: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-18 15:58:34,667: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-18 15:58:34,668: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-18 15:58:34,669: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-18 15:58:34,670: INFO: common: created directory at: artifacts]
+[2026-05-18 15:58:34,670: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-18 15:58:34,678: ERROR: data_validation: 'str' object has no attribute 'COLUMNS']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 18, in validate_data
+    expected_columns = set(self.config.all_schema.COLUMNS.keys())
+AttributeError: 'str' object has no attribute 'COLUMNS'
+[2026-05-18 15:58:34,679: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-18 16:02:56,278: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-18 16:02:56,282: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-18 16:02:56,282: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-18 16:02:56,284: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-18 16:02:56,285: INFO: common: created directory at: artifacts]
+[2026-05-18 16:02:56,285: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-18 16:02:56,294: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-18 16:02:56,295: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
