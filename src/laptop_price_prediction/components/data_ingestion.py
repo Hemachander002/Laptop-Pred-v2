@@ -26,7 +26,7 @@ class DataIngestion:
         Function returns None
         """
         if not zipfile.is_zipfile(self.config.local_data_file):
-            raise Exception(f"File is not a zip file: {self.config.local_data_file}")
+            pass
         else:
             unzip_path = self.config.unzip_dir
             os.makedirs(unzip_path, exist_ok=True)

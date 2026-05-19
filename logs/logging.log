@@ -147,3 +147,1256 @@ x==========x]
 [2026-05-18 16:02:56,295: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
 
 x==========x]
+[2026-05-19 01:45:51,419: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 01:45:51,427: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:45:51,429: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:45:51,431: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:45:51,431: INFO: common: created directory at: artifacts]
+[2026-05-19 01:45:51,431: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 01:45:51,432: INFO: data_ingestion: File already exists]
+[2026-05-19 01:45:51,436: ERROR: main: File is not a zip file: artifacts/data_ingestion/data.csv]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 10, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_ingestion_pipeline.py", line 17, in InitiateDataIngestionTrainingPipeline
+    data_ingestion.extract_zip_file()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_ingestion.py", line 29, in extract_zip_file
+    raise Exception(f"File is not a zip file: {self.config.local_data_file}")
+Exception: File is not a zip file: artifacts/data_ingestion/data.csv
+[2026-05-19 01:49:08,583: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 01:49:08,587: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:49:08,588: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:49:08,590: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:49:08,590: INFO: common: created directory at: artifacts]
+[2026-05-19 01:49:08,591: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 01:49:08,591: INFO: data_ingestion: File already exists]
+[2026-05-19 01:49:08,592: ERROR: main: File is not a zip file: artifacts/data_ingestion/data.csv]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 10, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_ingestion_pipeline.py", line 17, in InitiateDataIngestionTrainingPipeline
+    data_ingestion.extract_zip_file()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_ingestion.py", line 29, in extract_zip_file
+    raise Exception(f"File is not a zip file: {self.config.local_data_file}")
+Exception: File is not a zip file: artifacts/data_ingestion/data.csv
+[2026-05-19 01:52:24,554: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 01:52:24,558: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:52:24,559: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:52:24,561: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:52:24,561: INFO: common: created directory at: artifacts]
+[2026-05-19 01:52:24,562: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 01:52:24,562: INFO: data_ingestion: File already exists]
+[2026-05-19 01:52:24,562: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:52:24,563: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:52:24,563: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 01:52:24,566: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:52:24,567: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:52:24,569: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:52:24,569: INFO: common: created directory at: artifacts]
+[2026-05-19 01:52:24,569: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 01:52:24,576: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 01:52:24,577: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:52:24,577: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 01:52:24,578: ERROR: data_transformation_pipeline: [Errno 22] Invalid argument: 'E:\\PROJECT\\lap price pred\x07rtifacts\\data_validation\\status.txt']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 16, in InitiateDataTransformationPipeline
+    with open(Path("E:\PROJECT\lap price pred\artifacts\data_validation\status.txt"), "r") as f:
+OSError: [Errno 22] Invalid argument: 'E:\\PROJECT\\lap price pred\x07rtifacts\\data_validation\\status.txt'
+[2026-05-19 01:52:24,578: ERROR: main: [Errno 22] Invalid argument: 'E:\\PROJECT\\lap price pred\x07rtifacts\\data_validation\\status.txt']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 29, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 16, in InitiateDataTransformationPipeline
+    with open(Path("E:\PROJECT\lap price pred\artifacts\data_validation\status.txt"), "r") as f:
+OSError: [Errno 22] Invalid argument: 'E:\\PROJECT\\lap price pred\x07rtifacts\\data_validation\\status.txt'
+[2026-05-19 01:54:17,129: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 01:54:17,132: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:54:17,133: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:54:17,135: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:54:17,135: INFO: common: created directory at: artifacts]
+[2026-05-19 01:54:17,136: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 01:54:17,136: INFO: data_ingestion: File already exists]
+[2026-05-19 01:54:17,137: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:54:17,137: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:54:17,137: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 01:54:17,141: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:54:17,141: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:54:17,144: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:54:17,144: INFO: common: created directory at: artifacts]
+[2026-05-19 01:54:17,145: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 01:54:17,152: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 01:54:17,153: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:54:17,153: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 01:54:17,154: ERROR: data_transformation_pipeline: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 01:54:17,154: ERROR: main: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 29, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 01:55:39,355: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 01:55:39,359: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:55:39,360: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:55:39,362: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:55:39,362: INFO: common: created directory at: artifacts]
+[2026-05-19 01:55:39,363: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 01:55:39,363: INFO: data_ingestion: File already exists]
+[2026-05-19 01:55:39,364: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:55:39,364: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:55:39,364: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 01:55:39,367: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:55:39,368: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:55:39,370: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:55:39,370: INFO: common: created directory at: artifacts]
+[2026-05-19 01:55:39,371: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 01:55:39,378: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 01:55:39,379: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:55:39,379: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 01:55:39,379: ERROR: data_transformation_pipeline: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 01:55:39,380: ERROR: main: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 29, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 01:57:57,188: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 01:57:57,191: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:57:57,192: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:57:57,194: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:57:57,194: INFO: common: created directory at: artifacts]
+[2026-05-19 01:57:57,194: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 01:57:57,194: INFO: data_ingestion: File already exists]
+[2026-05-19 01:57:57,196: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:57:57,196: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:57:57,196: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 01:57:57,199: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 01:57:57,200: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 01:57:57,201: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 01:57:57,202: INFO: common: created directory at: artifacts]
+[2026-05-19 01:57:57,202: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 01:57:57,209: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 01:57:57,210: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 01:57:57,210: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 01:57:57,210: ERROR: data_transformation_pipeline: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 01:57:57,211: ERROR: main: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 29, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 02:00:05,302: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:00:05,305: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:00:05,306: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:00:05,308: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:00:05,308: INFO: common: created directory at: artifacts]
+[2026-05-19 02:00:05,308: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:00:05,309: INFO: data_ingestion: File already exists]
+[2026-05-19 02:00:05,309: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:00:05,309: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:00:05,309: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:00:05,313: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:00:05,314: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:00:05,316: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:00:05,316: INFO: common: created directory at: artifacts]
+[2026-05-19 02:00:05,317: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:00:05,324: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:00:05,329: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:00:05,330: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:00:05,330: ERROR: data_transformation_pipeline: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 02:00:05,331: ERROR: main: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 29, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 25, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 02:00:40,909: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:00:40,913: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:00:40,914: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:00:40,916: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:00:40,916: INFO: common: created directory at: artifacts]
+[2026-05-19 02:00:40,917: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:00:40,917: INFO: data_ingestion: File already exists]
+[2026-05-19 02:00:40,917: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:00:40,917: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:00:40,917: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:00:40,921: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:00:40,922: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:00:40,923: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:00:40,924: INFO: common: created directory at: artifacts]
+[2026-05-19 02:00:40,924: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:00:40,932: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:00:40,933: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:00:40,934: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:00:40,934: ERROR: data_transformation_pipeline: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 27, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 02:00:40,935: ERROR: main: Data validation failed. Data transformation cannot proceed.]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 31, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 27, in InitiateDataTransformationPipeline
+    raise Exception("Data validation failed. Data transformation cannot proceed.")
+Exception: Data validation failed. Data transformation cannot proceed.
+[2026-05-19 02:03:17,096: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:03:17,099: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:03:17,100: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:03:17,101: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:03:17,102: INFO: common: created directory at: artifacts]
+[2026-05-19 02:03:17,102: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:03:17,102: INFO: data_ingestion: File already exists]
+[2026-05-19 02:03:17,103: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:03:17,103: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:03:17,103: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:03:17,106: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:03:17,107: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:03:17,109: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:03:17,109: INFO: common: created directory at: artifacts]
+[2026-05-19 02:03:17,109: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:03:17,117: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:03:17,118: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:03:17,118: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:03:17,121: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:03:17,122: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:03:17,123: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:03:17,124: INFO: common: created directory at: artifacts]
+[2026-05-19 02:03:17,124: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:03:17,169: ERROR: data_transformation: 'Gpu']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Gpu'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 182, in transform_data
+    data['gpu_rank'] = data['Gpu'].apply(gpu_rank)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Gpu'
+[2026-05-19 02:03:17,191: ERROR: data_transformation_pipeline: 'Gpu']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Gpu'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 219, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 182, in transform_data
+    data['gpu_rank'] = data['Gpu'].apply(gpu_rank)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Gpu'
+[2026-05-19 02:03:17,192: ERROR: main: 'Gpu']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Gpu'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 32, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 219, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 182, in transform_data
+    data['gpu_rank'] = data['Gpu'].apply(gpu_rank)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Gpu'
+[2026-05-19 02:08:50,661: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:08:50,664: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:08:50,665: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:08:50,667: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:08:50,667: INFO: common: created directory at: artifacts]
+[2026-05-19 02:08:50,668: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:08:50,668: INFO: data_ingestion: File already exists]
+[2026-05-19 02:08:50,668: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:08:50,668: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:08:50,668: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:08:50,671: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:08:50,672: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:08:50,674: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:08:50,674: INFO: common: created directory at: artifacts]
+[2026-05-19 02:08:50,675: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:08:50,682: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:08:50,683: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:08:50,683: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:08:50,686: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:08:50,687: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:08:50,689: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:08:50,689: INFO: common: created directory at: artifacts]
+[2026-05-19 02:08:50,689: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:08:50,741: ERROR: data_transformation: "None of [Index(['company', 'typename'], dtype='object')] are in the [columns]"]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 186, in transform_data
+    data = pd.get_dummies(data,columns=["company","typename"])
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\reshape\encoding.py", line 170, in get_dummies
+    data_to_encode = data[columns]
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 6261, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['company', 'typename'], dtype='object')] are in the [columns]"
+[2026-05-19 02:08:50,757: ERROR: data_transformation_pipeline: "None of [Index(['company', 'typename'], dtype='object')] are in the [columns]"]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 219, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 186, in transform_data
+    data = pd.get_dummies(data,columns=["company","typename"])
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\reshape\encoding.py", line 170, in get_dummies
+    data_to_encode = data[columns]
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 6261, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['company', 'typename'], dtype='object')] are in the [columns]"
+[2026-05-19 02:08:50,758: ERROR: main: "None of [Index(['company', 'typename'], dtype='object')] are in the [columns]"]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 32, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 219, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 186, in transform_data
+    data = pd.get_dummies(data,columns=["company","typename"])
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\reshape\encoding.py", line 170, in get_dummies
+    data_to_encode = data[columns]
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\frame.py", line 4119, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 6212, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\core\indexes\base.py", line 6261, in _raise_if_missing
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['company', 'typename'], dtype='object')] are in the [columns]"
+[2026-05-19 02:10:19,206: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:10:19,209: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:10:19,209: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:10:19,212: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:10:19,213: INFO: common: created directory at: artifacts]
+[2026-05-19 02:10:19,213: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:10:19,213: INFO: data_ingestion: File already exists]
+[2026-05-19 02:10:19,214: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:10:19,214: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:10:19,214: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:10:19,218: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:10:19,218: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:10:19,220: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:10:19,221: INFO: common: created directory at: artifacts]
+[2026-05-19 02:10:19,221: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:10:19,228: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:10:19,229: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:10:19,229: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:10:19,232: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:10:19,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:10:19,235: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:10:19,235: INFO: common: created directory at: artifacts]
+[2026-05-19 02:10:19,236: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:10:19,287: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:10:19,327: INFO: data_transformation: Data split successful!]
+[2026-05-19 02:10:19,327: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:15:07,229: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:15:07,232: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:15:07,233: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:15:07,235: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:15:07,235: INFO: common: created directory at: artifacts]
+[2026-05-19 02:15:07,236: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:15:07,236: INFO: data_ingestion: File already exists]
+[2026-05-19 02:15:07,236: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:15:07,236: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:15:07,236: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:15:07,240: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:15:07,241: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:15:07,243: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:15:07,243: INFO: common: created directory at: artifacts]
+[2026-05-19 02:15:07,244: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:15:07,250: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:15:07,251: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:15:07,251: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:15:07,255: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:15:07,255: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:15:07,257: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:15:07,258: INFO: common: created directory at: artifacts]
+[2026-05-19 02:15:07,258: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:15:07,308: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:15:07,355: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:15:07,377: INFO: data_transformation: Data split successful!]
+[2026-05-19 02:15:07,377: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:22:19,408: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:22:19,411: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:22:19,411: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:22:19,413: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:22:19,414: INFO: common: created directory at: artifacts]
+[2026-05-19 02:22:19,414: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:22:20,178: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Mon, 18 May 2026 20:52:27 GMT
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 2BA9:332A53:1E03:13F28:6A0B7C0B
+connection: close
+
+]
+[2026-05-19 02:22:20,180: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:22:20,180: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:22:20,180: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:22:20,183: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:22:20,184: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:22:20,186: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:22:20,186: INFO: common: created directory at: artifacts]
+[2026-05-19 02:22:20,186: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:22:20,188: ERROR: data_validation: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 17, in validate_data
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:22:20,202: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:22:20,202: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:22:20,205: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:22:20,206: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:22:20,208: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:22:20,208: INFO: common: created directory at: artifacts]
+[2026-05-19 02:22:20,209: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:22:20,209: ERROR: data_transformation: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:22:20,209: ERROR: data_transformation_pipeline: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 220, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:22:20,211: ERROR: main: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 33, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 220, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:23:00,403: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:23:00,406: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:23:00,407: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:23:00,409: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:23:00,409: INFO: common: created directory at: artifacts]
+[2026-05-19 02:23:00,410: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:23:00,410: INFO: data_ingestion: File already exists]
+[2026-05-19 02:23:00,414: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:23:00,415: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:23:00,415: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:23:00,419: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:23:00,419: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:23:00,421: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:23:00,422: INFO: common: created directory at: artifacts]
+[2026-05-19 02:23:00,422: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:23:00,424: ERROR: data_validation: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 17, in validate_data
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:23:00,425: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:23:00,425: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:23:00,431: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:23:00,431: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:23:00,434: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:23:00,435: INFO: common: created directory at: artifacts]
+[2026-05-19 02:23:00,435: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:23:00,436: ERROR: data_transformation: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:23:00,436: ERROR: data_transformation_pipeline: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 220, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:23:00,437: ERROR: main: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 33, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 220, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:25:08,556: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:25:08,559: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:25:08,559: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:25:08,561: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:25:08,561: INFO: common: created directory at: artifacts]
+[2026-05-19 02:25:08,562: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:25:08,562: INFO: data_ingestion: File already exists]
+[2026-05-19 02:25:08,563: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:25:08,563: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:25:08,563: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:25:08,566: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:25:08,567: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:25:08,569: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:25:08,569: INFO: common: created directory at: artifacts]
+[2026-05-19 02:25:08,570: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:25:08,577: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:25:08,578: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:25:08,578: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:25:08,581: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:25:08,582: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:25:08,583: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:25:08,584: INFO: common: created directory at: artifacts]
+[2026-05-19 02:25:08,584: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:25:08,634: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:25:08,683: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:25:08,696: INFO: data_transformation: Data split successful!]
+[2026-05-19 02:25:08,696: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:25:41,841: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:25:41,844: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:25:41,845: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:25:41,847: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:25:41,847: INFO: common: created directory at: artifacts]
+[2026-05-19 02:25:41,848: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:25:42,607: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 10, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_ingestion_pipeline.py", line 16, in InitiateDataIngestionTrainingPipeline
+    data_ingestion.download_file()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_ingestion.py", line 14, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\PROJECT\lap price pred\venv\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv'
+[2026-05-19 02:27:03,441: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:27:03,444: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:27:03,445: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:27:03,447: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:27:03,447: INFO: common: created directory at: artifacts]
+[2026-05-19 02:27:03,448: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:27:03,907: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 10, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_ingestion_pipeline.py", line 16, in InitiateDataIngestionTrainingPipeline
+    data_ingestion.download_file()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_ingestion.py", line 14, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\PROJECT\lap price pred\venv\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv'
+[2026-05-19 02:28:05,107: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:28:05,117: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:28:05,118: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:28:05,121: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:28:05,121: INFO: common: created directory at: artifacts]
+[2026-05-19 02:28:05,121: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:28:05,586: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 10, in <module>
+    obj.InitiateDataIngestionTrainingPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_ingestion_pipeline.py", line 16, in InitiateDataIngestionTrainingPipeline
+    data_ingestion.download_file()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_ingestion.py", line 14, in download_file
+    filename, headers = request.urlretrieve(
+  File "E:\PROJECT\lap price pred\venv\lib\urllib\request.py", line 251, in urlretrieve
+    tfp = open(filename, 'wb')
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv'
+[2026-05-19 02:30:58,907: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:30:58,911: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:30:58,912: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:30:58,915: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:30:58,916: INFO: common: created directory at: artifacts]
+[2026-05-19 02:30:58,917: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:30:58,917: INFO: data_ingestion: File already exists]
+[2026-05-19 02:30:58,917: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:30:58,917: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:30:58,917: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:30:58,922: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:30:58,923: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:30:58,927: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:30:58,928: INFO: common: created directory at: artifacts]
+[2026-05-19 02:30:58,929: INFO: common: created directory at: artifacts/data_validation/]
+[2026-05-19 02:30:58,931: ERROR: data_validation: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 17, in validate_data
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/datasets-main/data.csv'
+[2026-05-19 02:30:58,947: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:30:58,947: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:30:58,948: ERROR: data_transformation_pipeline: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 16, in InitiateDataTransformationPipeline
+    with open(Path("artifacts/data_validation/status.txt"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt'
+[2026-05-19 02:30:58,948: ERROR: main: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 33, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 16, in InitiateDataTransformationPipeline
+    with open(Path("artifacts/data_validation/status.txt"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt'
+[2026-05-19 02:35:15,765: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:35:15,769: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:35:15,770: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:35:15,771: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:35:15,772: INFO: common: created directory at: artifacts]
+[2026-05-19 02:35:15,772: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:35:16,519: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Length: 20690
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Mon, 18 May 2026 21:05:23 GMT
+X-GitHub-Request-Id: 14FF:27B1E1:1DF4:16054:6A0B7F13
+connection: close
+
+]
+[2026-05-19 02:35:16,521: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:35:16,521: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:35:16,521: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:35:16,524: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:35:16,525: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:35:16,528: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:35:16,528: INFO: common: created directory at: artifacts]
+[2026-05-19 02:35:16,528: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:35:16,530: ERROR: data_validation: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 17, in validate_data
+    data = pd.read_csv(self.config.unzip_data_dir)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:35:16,532: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:35:16,532: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:35:16,532: ERROR: data_transformation_pipeline: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 16, in InitiateDataTransformationPipeline
+    with open(Path("artifacts/data_validation/status.txt"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt'
+[2026-05-19 02:35:16,533: ERROR: main: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 33, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 16, in InitiateDataTransformationPipeline
+    with open(Path("artifacts/data_validation/status.txt"), "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts\\data_validation\\status.txt'
+[2026-05-19 02:37:11,807: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:37:11,811: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:37:11,811: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:37:11,813: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:37:11,813: INFO: common: created directory at: artifacts]
+[2026-05-19 02:37:11,814: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:37:12,260: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Length: 20690
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Mon, 18 May 2026 21:07:19 GMT
+X-GitHub-Request-Id: 51C3:106076:1BF4:16045:6A0B7F87
+connection: close
+
+]
+[2026-05-19 02:37:12,262: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:37:12,262: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:37:12,262: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:37:12,265: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:37:12,265: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:37:12,267: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:37:12,268: INFO: common: created directory at: artifacts]
+[2026-05-19 02:37:12,268: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:37:12,275: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:37:12,277: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:37:12,277: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:37:12,280: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:37:12,281: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:37:12,282: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:37:12,283: INFO: common: created directory at: artifacts]
+[2026-05-19 02:37:12,283: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:37:12,284: ERROR: data_transformation: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:37:12,285: ERROR: data_transformation_pipeline: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 220, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:37:12,286: ERROR: main: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 31, in <module>
+    obj.InitiateDataTransformationPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 33, in InitiateDataTransformationPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\data_transformation_pipeline.py", line 23, in InitiateDataTransformationPipeline
+    data_transformation.transform_data()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 220, in transform_data
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_transformation.py", line 15, in transform_data
+    data = pd.read_csv(self.config.data_path)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\readers.py", line 1898, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 93, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 574, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 663, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "pandas/_libs/parsers.pyx", line 2053, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb2 in position 12: invalid start byte
+[2026-05-19 02:37:52,108: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 02:37:52,112: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:37:52,112: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:37:52,114: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:37:52,115: INFO: common: created directory at: artifacts]
+[2026-05-19 02:37:52,115: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 02:37:52,913: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Mon, 18 May 2026 21:08:00 GMT
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 743A:380DF3:1DD6:1646D:6A0B7FB0
+connection: close
+
+]
+[2026-05-19 02:37:52,915: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:37:52,915: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:37:52,915: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 02:37:52,920: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:37:52,920: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:37:52,923: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:37:52,923: INFO: common: created directory at: artifacts]
+[2026-05-19 02:37:52,923: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 02:37:52,930: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 02:37:52,931: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 02:37:52,932: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 02:37:52,935: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 02:37:52,936: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 02:37:52,937: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 02:37:52,937: INFO: common: created directory at: artifacts]
+[2026-05-19 02:37:52,937: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 02:37:52,992: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:37:53,042: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 02:37:53,056: INFO: data_transformation: Data split successful!]
+[2026-05-19 02:37:53,056: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:04:54,084: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 10:04:54,103: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 10:04:54,104: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 10:04:54,105: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 10:04:54,106: INFO: common: created directory at: artifacts]
+[2026-05-19 10:04:54,106: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 10:04:54,934: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Tue, 19 May 2026 04:35:02 GMT
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 80FC:4E38A:66F7:5E6B6:6A0BE876
+connection: close
+
+]
+[2026-05-19 10:04:54,937: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:04:54,937: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:04:54,938: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 10:04:54,941: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 10:04:54,942: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 10:04:54,944: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 10:04:54,944: INFO: common: created directory at: artifacts]
+[2026-05-19 10:04:54,945: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 10:04:54,951: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 10:04:54,952: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:04:54,953: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 10:04:54,956: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 10:04:54,956: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 10:04:54,958: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 10:04:54,959: INFO: common: created directory at: artifacts]
+[2026-05-19 10:04:54,959: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 10:04:55,014: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 10:04:55,066: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 10:04:55,092: INFO: data_transformation: Data split successful!]
+[2026-05-19 10:04:55,092: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:14:11,318: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 10:14:11,322: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 10:14:11,322: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 10:14:11,324: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 10:14:11,324: INFO: common: created directory at: artifacts]
+[2026-05-19 10:14:11,325: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 10:14:12,121: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Tue, 19 May 2026 04:44:19 GMT
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 8164:1001F6:7634:60EF0:6A0BEAA3
+connection: close
+
+]
+[2026-05-19 10:14:12,123: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:14:12,124: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:14:12,124: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 10:14:12,127: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 10:14:12,128: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 10:14:12,130: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 10:14:12,131: INFO: common: created directory at: artifacts]
+[2026-05-19 10:14:12,132: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 10:14:12,139: INFO: data_validation: Column validation successful! All expected columns are present.]
+[2026-05-19 10:14:12,140: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 10:14:12,140: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 10:14:12,143: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 10:14:12,144: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 10:14:12,145: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 10:14:12,146: INFO: common: created directory at: artifacts]
+[2026-05-19 10:14:12,146: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 10:14:12,202: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 10:14:12,253: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 10:14:12,267: INFO: data_transformation: Data split successful!]
+[2026-05-19 10:14:12,268: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
