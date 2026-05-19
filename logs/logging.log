@@ -1829,3 +1829,336 @@ x==========x]
 [2026-05-19 13:35:51,989: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
 
 x==========x]
+[2026-05-19 15:47:08,982: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 15:47:08,985: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:47:08,987: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:47:08,988: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:47:08,989: INFO: common: created directory at: artifacts]
+[2026-05-19 15:47:08,989: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 15:47:08,990: INFO: data_ingestion: File already exists]
+[2026-05-19 15:47:08,992: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:47:08,992: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:47:08,992: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 15:47:08,995: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:47:08,997: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:47:08,999: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:47:08,999: INFO: common: created directory at: artifacts]
+[2026-05-19 15:47:08,999: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 15:47:09,006: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 15:47:09,009: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:47:09,009: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 15:47:09,012: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:47:09,014: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:47:09,015: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:47:09,016: INFO: common: created directory at: artifacts]
+[2026-05-19 15:47:09,016: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 15:47:09,072: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:47:09,131: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:47:09,156: INFO: data_transformation: Data split successful!]
+[2026-05-19 15:47:09,157: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:47:09,157: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 15:47:09,160: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:47:09,161: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:47:09,163: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:47:09,163: INFO: common: created directory at: artifacts]
+[2026-05-19 15:47:09,164: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 15:47:09,164: INFO: model_trainer: Loading training data...]
+[2026-05-19 15:47:09,168: INFO: model_trainer: Loading testing data...]
+[2026-05-19 15:47:09,172: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 15:47:10,568: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 15:47:10,617: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:47:10,617: INFO: main: >>>>>>> stage Model Evaluation Stage started <<<<<<<]
+[2026-05-19 15:47:10,621: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:47:10,623: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:47:10,626: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:47:10,627: INFO: common: created directory at: artifacts]
+[2026-05-19 15:47:10,627: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-05-19 15:47:10,632: ERROR: main: name 'config' is not defined]
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 56, in <module>
+    obj.InitiateModelEvaluation()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_evaluation_pipeline.py", line 16, in InitiateModelEvaluation
+    model_eval.log_into_mlflow()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\model_evaluation.py", line 34, in log_into_mlflow
+    mlflow.set_registry_uri(config.registry_uri)
+NameError: name 'config' is not defined
+[2026-05-19 15:51:11,213: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 15:51:11,216: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:51:11,218: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:51:11,220: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:51:11,220: INFO: common: created directory at: artifacts]
+[2026-05-19 15:51:11,220: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 15:51:11,221: INFO: data_ingestion: File already exists]
+[2026-05-19 15:51:11,222: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:51:11,222: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:51:11,222: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 15:51:11,226: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:51:11,227: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:51:11,229: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:51:11,229: INFO: common: created directory at: artifacts]
+[2026-05-19 15:51:11,230: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 15:51:11,237: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 15:51:11,240: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:51:11,240: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 15:51:11,243: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:51:11,245: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:51:11,247: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:51:11,247: INFO: common: created directory at: artifacts]
+[2026-05-19 15:51:11,247: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 15:51:11,303: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:51:11,354: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:51:11,369: INFO: data_transformation: Data split successful!]
+[2026-05-19 15:51:11,370: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:51:11,370: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 15:51:11,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:51:11,375: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:51:11,377: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:51:11,377: INFO: common: created directory at: artifacts]
+[2026-05-19 15:51:11,377: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 15:51:11,378: INFO: model_trainer: Loading training data...]
+[2026-05-19 15:51:11,382: INFO: model_trainer: Loading testing data...]
+[2026-05-19 15:51:11,385: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 15:51:12,768: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 15:51:12,824: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:51:12,824: INFO: main: >>>>>>> stage Model Evaluation Stage started <<<<<<<]
+[2026-05-19 15:51:12,829: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:51:12,831: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:51:12,835: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:51:12,835: INFO: common: created directory at: artifacts]
+[2026-05-19 15:51:12,836: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-05-19 15:51:15,199: ERROR: main: 'ModelEvaluator' object has no attribute 'metric_file_name']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 56, in <module>
+    obj.InitiateModelEvaluation()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_evaluation_pipeline.py", line 16, in InitiateModelEvaluation
+    model_eval.log_into_mlflow()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\model_evaluation.py", line 43, in log_into_mlflow
+    save_json(path= Path(self.metric_file_name), data=scores)
+AttributeError: 'ModelEvaluator' object has no attribute 'metric_file_name'
+[2026-05-19 15:53:17,370: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 15:53:17,373: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:53:17,374: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:53:17,376: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:53:17,377: INFO: common: created directory at: artifacts]
+[2026-05-19 15:53:17,377: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 15:53:17,377: INFO: data_ingestion: File already exists]
+[2026-05-19 15:53:17,380: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:53:17,380: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:53:17,380: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 15:53:17,384: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:53:17,385: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:53:17,387: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:53:17,388: INFO: common: created directory at: artifacts]
+[2026-05-19 15:53:17,388: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 15:53:17,395: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 15:53:17,398: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:53:17,398: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 15:53:17,401: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:53:17,403: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:53:17,405: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:53:17,406: INFO: common: created directory at: artifacts]
+[2026-05-19 15:53:17,406: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 15:53:17,460: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:53:17,512: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:53:17,527: INFO: data_transformation: Data split successful!]
+[2026-05-19 15:53:17,528: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:53:17,528: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 15:53:17,531: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:53:17,534: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:53:17,535: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:53:17,536: INFO: common: created directory at: artifacts]
+[2026-05-19 15:53:17,536: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 15:53:17,536: INFO: model_trainer: Loading training data...]
+[2026-05-19 15:53:17,541: INFO: model_trainer: Loading testing data...]
+[2026-05-19 15:53:17,543: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 15:53:18,933: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 15:53:18,992: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:53:18,993: INFO: main: >>>>>>> stage Model Evaluation Stage started <<<<<<<]
+[2026-05-19 15:53:18,997: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:53:18,999: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:53:19,002: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:53:19,002: INFO: common: created directory at: artifacts]
+[2026-05-19 15:53:19,003: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-05-19 15:53:21,133: ERROR: main: 'ModelEvaluator' object has no attribute 'config']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 56, in <module>
+    obj.InitiateModelEvaluation()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_evaluation_pipeline.py", line 16, in InitiateModelEvaluation
+    model_eval.log_into_mlflow()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\model_evaluation.py", line 43, in log_into_mlflow
+    save_json(path= Path(self.config.metric_file_name), data=scores)
+AttributeError: 'ModelEvaluator' object has no attribute 'config'
+[2026-05-19 15:54:39,760: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 15:54:39,763: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:54:39,765: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:54:39,766: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:54:39,767: INFO: common: created directory at: artifacts]
+[2026-05-19 15:54:39,767: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 15:54:39,768: INFO: data_ingestion: File already exists]
+[2026-05-19 15:54:39,769: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:54:39,769: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:54:39,771: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 15:54:39,773: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:54:39,775: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:54:39,776: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:54:39,777: INFO: common: created directory at: artifacts]
+[2026-05-19 15:54:39,777: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 15:54:39,785: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 15:54:39,787: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:54:39,787: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 15:54:39,791: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:54:39,792: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:54:39,793: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:54:39,794: INFO: common: created directory at: artifacts]
+[2026-05-19 15:54:39,794: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 15:54:39,848: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:54:39,900: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:54:39,917: INFO: data_transformation: Data split successful!]
+[2026-05-19 15:54:39,917: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:54:39,917: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 15:54:39,921: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:54:39,922: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:54:39,925: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:54:39,925: INFO: common: created directory at: artifacts]
+[2026-05-19 15:54:39,926: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 15:54:39,926: INFO: model_trainer: Loading training data...]
+[2026-05-19 15:54:39,931: INFO: model_trainer: Loading testing data...]
+[2026-05-19 15:54:39,933: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 15:54:41,306: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 15:54:41,358: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:54:41,359: INFO: main: >>>>>>> stage Model Evaluation Stage started <<<<<<<]
+[2026-05-19 15:54:41,363: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:54:41,365: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:54:41,368: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:54:41,368: INFO: common: created directory at: artifacts]
+[2026-05-19 15:54:41,369: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-05-19 15:54:42,704: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-05-19 15:54:43,674: ERROR: main: 'str' object has no attribute 'items']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 56, in <module>
+    obj.InitiateModelEvaluation()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_evaluation_pipeline.py", line 16, in InitiateModelEvaluation
+    model_eval.log_into_mlflow()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\model_evaluation.py", line 47, in log_into_mlflow
+    mlflow.log_metrics("mse", mse)
+  File "E:\PROJECT\lap price pred\venv\lib\site-packages\mlflow\tracking\fluent.py", line 1352, in log_metrics
+    for key, value in metrics.items()
+AttributeError: 'str' object has no attribute 'items'
+[2026-05-19 15:56:41,893: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 15:56:41,896: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:56:41,898: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:56:41,899: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:56:41,900: INFO: common: created directory at: artifacts]
+[2026-05-19 15:56:41,900: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 15:56:41,901: INFO: data_ingestion: File already exists]
+[2026-05-19 15:56:41,903: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:56:41,903: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:56:41,903: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 15:56:41,906: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:56:41,908: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:56:41,909: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:56:41,910: INFO: common: created directory at: artifacts]
+[2026-05-19 15:56:41,910: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 15:56:41,918: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 15:56:41,920: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:56:41,921: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 15:56:41,923: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:56:41,925: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:56:41,927: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:56:41,927: INFO: common: created directory at: artifacts]
+[2026-05-19 15:56:41,927: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 15:56:41,982: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:56:42,035: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 15:56:42,050: INFO: data_transformation: Data split successful!]
+[2026-05-19 15:56:42,050: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:56:42,050: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 15:56:42,054: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:56:42,055: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:56:42,057: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:56:42,057: INFO: common: created directory at: artifacts]
+[2026-05-19 15:56:42,057: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 15:56:42,058: INFO: model_trainer: Loading training data...]
+[2026-05-19 15:56:42,062: INFO: model_trainer: Loading testing data...]
+[2026-05-19 15:56:42,065: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 15:56:43,450: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 15:56:43,507: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 15:56:43,508: INFO: main: >>>>>>> stage Model Evaluation Stage started <<<<<<<]
+[2026-05-19 15:56:43,513: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 15:56:43,515: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 15:56:43,518: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 15:56:43,518: INFO: common: created directory at: artifacts]
+[2026-05-19 15:56:43,519: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-05-19 15:56:45,030: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-05-19 15:57:07,636: INFO: main: >>>>>>> stage Model Evaluation Stage completed <<<<<<<
+
+x==========x]

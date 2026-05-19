@@ -35,3 +35,13 @@ class ModelTrainerConfig:
     colsample_bytree : float
     min_child_weight : int
     target_column : str
+
+@dataclass
+class ModelEvaluationConfig:
+    root_dir: Path
+    test_data_path: Path
+    model_path: Path
+    metric_file_name: Path
+    target_column: str
+    mlflow_uri: str
+    all_params : dict

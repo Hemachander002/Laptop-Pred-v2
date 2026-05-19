@@ -1,3 +1,4 @@
+from src.laptop_price_prediction.pipeline.model_evaluation_pipeline import ModelEvaluationPipeline
 from src.laptop_price_prediction.pipeline.model_training_pipeline import ModelTrainerPipeline
 from src.laptop_price_prediction.pipeline.data_validation_pipeline import DataValidationPipeline
 from src.laptop_price_prediction import logger
@@ -42,6 +43,17 @@ if __name__=="__main__":
         logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<<")
         obj=ModelTrainerPipeline()
         obj.InitiateModelTrainerPipeline()
+        logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<<\n\nx==========x")
+    except Exception as e:
+        logger.exception(e)
+        raise e
+    
+STAGE_NAME = "Model Evaluation Stage"
+if __name__=="__main__":
+    try:
+        logger.info(f">>>>>>> stage {STAGE_NAME} started <<<<<<<")
+        obj=ModelEvaluationPipeline()
+        obj.InitiateModelEvaluation()
         logger.info(f">>>>>>> stage {STAGE_NAME} completed <<<<<<<\n\nx==========x")
     except Exception as e:
         logger.exception(e)

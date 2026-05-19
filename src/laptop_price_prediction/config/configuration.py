@@ -1,6 +1,6 @@
 from src.laptop_price_prediction.constants import *
-from src.laptop_price_prediction.utils.common import read_yaml, create_directories
-from src.laptop_price_prediction.entity.config_entity import (DataIngestionConfig, DataTransformationConfig, ModelTrainerConfig)
+from src.laptop_price_prediction.utils.common import read_yaml, create_directories,save_json, load_json
+from src.laptop_price_prediction.entity.config_entity import (DataIngestionConfig, DataTransformationConfig, ModelEvaluationConfig, ModelTrainerConfig)
 from src.laptop_price_prediction.entity.config_entity import (DataValidationConfig)
 
 class ConfigurationManager:
@@ -71,5 +71,22 @@ class ConfigurationManager:
             target_column = schema.name
         )
         return model_trainer_config
+    
+    def get_model_evaluation_config(self):
+        config = self.config.model_evaluation
+        params = self.params.xgboost
+        schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
+
+        model_evaluation_config = ModelEvaluationConfig(
+            root_dir = config.root_dir,
+            test_data_path = config.test_data_path,
+            model_path = config.model_path,
+            metric_file_name = config.metric_file_name,
+            target_column = schema.name,
+            mlflow_uri = "https://dagshub.com/Hemachander002/Laptop-Pred-v2.mlflow",
+            all_params = params
+        )
+        return model_evaluation_config
     
     

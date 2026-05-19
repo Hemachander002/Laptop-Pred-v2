@@ -5,6 +5,11 @@ from src.laptop_price_prediction.entity.config_entity import (ModelTrainerConfig
 from src.laptop_price_prediction import logger
 import joblib
 import os
+import dagshub
+
+os.environ["MLFLOW_TRACKING_URI"] = "https://dagshub.com/Hemachander002/Laptop-Pred-v2.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"] = "Hemachander002"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "254edea09d48445e8e8de0075ef293dfc5f9e30a"
 
 class ModelTrainer:
     def __init__(self, config: ModelTrainerConfig):
