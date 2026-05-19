@@ -1,15 +1,15 @@
 COLUMNS:
-  Company: object
-  TypeName: object
-  Inches: object
-  ScreenResolution: object
-  Cpu: object
-  Ram: object
-  Memory: object
-  Gpu: object
-  OpSys: object
-  Weight: object
-  Price: float64
+  company: object
+  typeName: object
+  inches: object
+  screenresolution: object
+  cpu: object
+  ram: object
+  memory: object
+  gpu: object
+  opsys: object
+  weight: object
+  price: float64
 
 TARGET_COLUMN:
-  Price: float64
+  name: price

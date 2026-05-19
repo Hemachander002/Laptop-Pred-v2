@@ -1400,3 +1400,432 @@ x==========x]
 [2026-05-19 10:14:12,268: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
 
 x==========x]
+[2026-05-19 13:31:35,701: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 13:31:35,705: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:31:35,706: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:31:35,708: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:31:35,708: INFO: common: created directory at: artifacts]
+[2026-05-19 13:31:35,709: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 13:31:35,709: INFO: data_ingestion: File already exists]
+[2026-05-19 13:31:35,711: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:31:35,711: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:31:35,711: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 13:31:35,714: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:31:35,716: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:31:35,718: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:31:35,718: INFO: common: created directory at: artifacts]
+[2026-05-19 13:31:35,718: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 13:31:35,726: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 13:31:35,726: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:31:35,727: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 13:31:35,730: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:31:35,732: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:31:35,733: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:31:35,734: INFO: common: created directory at: artifacts]
+[2026-05-19 13:31:35,734: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 13:31:35,788: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:31:35,842: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:31:35,858: INFO: data_transformation: Data split successful!]
+[2026-05-19 13:31:35,858: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:31:35,858: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 13:31:35,861: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:31:35,863: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:31:35,864: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:31:35,864: INFO: common: created directory at: artifacts]
+[2026-05-19 13:31:35,865: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 13:31:35,879: ERROR: model_training_pipeline: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 17, in InitiateModelTrainerPipeline
+    model_trainer_config = config.get_model_trainer_config()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\config\configuration.py", line 71, in get_model_trainer_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2026-05-19 13:31:35,881: ERROR: main: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 44, in <module>
+    obj.InitiateModelTrainerPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 23, in InitiateModelTrainerPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 17, in InitiateModelTrainerPipeline
+    model_trainer_config = config.get_model_trainer_config()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\config\configuration.py", line 71, in get_model_trainer_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2026-05-19 13:32:39,057: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 13:32:39,060: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:32:39,062: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:32:39,064: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:32:39,064: INFO: common: created directory at: artifacts]
+[2026-05-19 13:32:39,064: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 13:32:39,065: INFO: data_ingestion: File already exists]
+[2026-05-19 13:32:39,067: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:32:39,068: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:32:39,068: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 13:32:39,071: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:32:39,073: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:32:39,074: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:32:39,074: INFO: common: created directory at: artifacts]
+[2026-05-19 13:32:39,074: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 13:32:39,082: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 13:32:39,083: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:32:39,083: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 13:32:39,086: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:32:39,087: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:32:39,089: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:32:39,090: INFO: common: created directory at: artifacts]
+[2026-05-19 13:32:39,090: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 13:32:39,145: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:32:39,197: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:32:39,213: INFO: data_transformation: Data split successful!]
+[2026-05-19 13:32:39,214: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:32:39,214: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 13:32:39,216: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:32:39,218: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:32:39,220: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:32:39,220: INFO: common: created directory at: artifacts]
+[2026-05-19 13:32:39,221: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 13:32:39,221: ERROR: model_training_pipeline: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 17, in InitiateModelTrainerPipeline
+    model_trainer_config = config.get_model_trainer_config()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\config\configuration.py", line 71, in get_model_trainer_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2026-05-19 13:32:39,222: ERROR: main: "'ConfigBox' object has no attribute 'model_path'"]
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 605, in box.box.Box.__getitem__
+KeyError: 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 644, in box.box.Box.__getattr__
+  File "box/box.py", line 632, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 646, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 44, in <module>
+    obj.InitiateModelTrainerPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 23, in InitiateModelTrainerPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 17, in InitiateModelTrainerPipeline
+    model_trainer_config = config.get_model_trainer_config()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\config\configuration.py", line 71, in get_model_trainer_config
+    model_path = config.model_path,
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 660, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'model_path'"
+[2026-05-19 13:34:59,537: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 13:34:59,541: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:34:59,542: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:34:59,544: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:34:59,546: INFO: common: created directory at: artifacts]
+[2026-05-19 13:34:59,546: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 13:34:59,546: INFO: data_ingestion: File already exists]
+[2026-05-19 13:34:59,548: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:34:59,548: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:34:59,548: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 13:34:59,552: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:34:59,553: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:34:59,556: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:34:59,556: INFO: common: created directory at: artifacts]
+[2026-05-19 13:34:59,556: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 13:34:59,563: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 13:34:59,564: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:34:59,564: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 13:34:59,567: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:34:59,569: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:34:59,570: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:34:59,571: INFO: common: created directory at: artifacts]
+[2026-05-19 13:34:59,571: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 13:34:59,627: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:34:59,680: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:34:59,695: INFO: data_transformation: Data split successful!]
+[2026-05-19 13:34:59,695: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:34:59,696: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 13:34:59,699: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:34:59,700: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:34:59,702: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:34:59,702: INFO: common: created directory at: artifacts]
+[2026-05-19 13:34:59,703: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 13:34:59,703: ERROR: model_training_pipeline: ModelTrainerConfig.__init__() missing 1 required positional argument: 'model_path']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 17, in InitiateModelTrainerPipeline
+    model_trainer_config = config.get_model_trainer_config()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\config\configuration.py", line 58, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+TypeError: ModelTrainerConfig.__init__() missing 1 required positional argument: 'model_path'
+[2026-05-19 13:34:59,703: ERROR: main: ModelTrainerConfig.__init__() missing 1 required positional argument: 'model_path']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\main.py", line 44, in <module>
+    obj.InitiateModelTrainerPipeline()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 23, in InitiateModelTrainerPipeline
+    raise e
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\pipeline\model_training_pipeline.py", line 17, in InitiateModelTrainerPipeline
+    model_trainer_config = config.get_model_trainer_config()
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\config\configuration.py", line 58, in get_model_trainer_config
+    model_trainer_config = ModelTrainerConfig(
+TypeError: ModelTrainerConfig.__init__() missing 1 required positional argument: 'model_path'
+[2026-05-19 13:35:50,148: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 13:35:50,152: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:35:50,153: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:35:50,155: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:35:50,155: INFO: common: created directory at: artifacts]
+[2026-05-19 13:35:50,156: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 13:35:50,156: INFO: data_ingestion: File already exists]
+[2026-05-19 13:35:50,157: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:35:50,158: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:35:50,158: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 13:35:50,161: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:35:50,162: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:35:50,164: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:35:50,164: INFO: common: created directory at: artifacts]
+[2026-05-19 13:35:50,166: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 13:35:50,172: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 13:35:50,173: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:35:50,173: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 13:35:50,176: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:35:50,178: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:35:50,179: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:35:50,180: INFO: common: created directory at: artifacts]
+[2026-05-19 13:35:50,180: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 13:35:50,243: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:35:50,296: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 13:35:50,312: INFO: data_transformation: Data split successful!]
+[2026-05-19 13:35:50,312: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 13:35:50,312: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 13:35:50,315: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 13:35:50,317: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 13:35:50,318: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 13:35:50,319: INFO: common: created directory at: artifacts]
+[2026-05-19 13:35:50,319: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 13:35:50,319: INFO: model_trainer: Loading training data...]
+[2026-05-19 13:35:50,324: INFO: model_trainer: Loading testing data...]
+[2026-05-19 13:35:50,328: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 13:35:51,923: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 13:35:51,989: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]

@@ -16,7 +16,7 @@ class DataValidation:
 
             data = pd.read_csv(self.config.unzip_data_dir)
             expected_columns = set(self.config.all_schema.keys())
-            actual_columns = set(data.columns)
+            actual_columns = set(data.columns.lower())
             if expected_columns != actual_columns:
                 logger.error(f"Data validation failed! Expected columns: {expected_columns}, Actual columns: {actual_columns}")
                 column_status = False
