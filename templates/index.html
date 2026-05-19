@@ -1,0 +1,255 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Price Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-section">
+
+            <h1>Laptop Price Predictor</h1>
+
+            <p>
+                Predict laptop prices instantly using Machine Learning.
+                Enter the laptop specifications and get the estimated laptop price.
+            </p>
+
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" alt="Laptop">
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="right-section">
+
+            <form action="/predict" method="POST">
+
+                <!-- COMPANY -->
+
+                <div class="input-group">
+                    <label for="Company">Company</label>
+
+                    <select id="Company" name="Company" required>
+
+                        <option value="">Select Company</option>
+
+                        <option>Apple</option>
+                        <option>HP</option>
+                        <option>Acer</option>
+                        <option>Asus</option>
+                        <option>Dell</option>
+                        <option>Lenovo</option>
+                        <option>Chuwi</option>
+                        <option>MSI</option>
+                        <option>Microsoft</option>
+                        <option>Toshiba</option>
+                        <option>Huawei</option>
+                        <option>Xiaomi</option>
+                        <option>Vero</option>
+                        <option>Razer</option>
+                        <option>Mediacom</option>
+                        <option>Samsung</option>
+                        <option>Google</option>
+                        <option>Fujitsu</option>
+                        <option>LG</option>
+
+                    </select>
+                </div>
+
+
+                <!-- TYPE -->
+
+                <div class="input-group">
+
+                    <label for="TypeName">Type Name</label>
+
+                    <select id="TypeName" name="TypeName" required>
+
+                        <option value="">Select Type</option>
+
+                        <option>Ultrabook</option>
+                        <option>Notebook</option>
+                        <option>Gaming</option>
+                        <option>2 in 1 Convertible</option>
+                        <option>Workstation</option>
+                        <option>Netbook</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- INCHES -->
+
+                <div class="input-group">
+
+                    <label for="Inches">Screen Size (Inches)</label>
+
+                    <input type="number"
+                        step="0.1"
+                        id="Inches"
+                        name="Inches"
+                        placeholder="15.6"
+                        required>
+
+                </div>
+
+
+                <!-- RESOLUTION -->
+
+                <div class="input-group">
+
+                    <label for="ScreenResolution">Screen Resolution</label>
+
+                    <select id="ScreenResolution" name="ScreenResolution" required>
+
+                        <option value="">Select Resolution</option>
+
+                        <option>1920x1080</option>
+                        <option>1366x768</option>
+                        <option>2560x1600</option>
+                        <option>3840x2160</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CPU -->
+
+                <div class="input-group">
+
+                    <label for="Cpu">CPU</label>
+
+                    <input type="text"
+                        id="Cpu"
+                        name="Cpu"
+                        placeholder="Intel Core i7"
+                        required>
+
+                </div>
+
+
+                <!-- RAM -->
+
+                <div class="input-group">
+
+                    <label for="Ram">RAM</label>
+
+                    <select id="Ram" name="Ram" required>
+
+                        <option>4GB</option>
+                        <option>8GB</option>
+                        <option>16GB</option>
+                        <option>32GB</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- MEMORY -->
+
+                <div class="input-group">
+
+                    <label for="Memory">Memory</label>
+
+                    <input type="text"
+                        id="Memory"
+                        name="Memory"
+                        placeholder="512GB SSD"
+                        required>
+
+                </div>
+
+
+                <!-- GPU -->
+
+                <div class="input-group">
+
+                    <label for="Gpu">GPU</label>
+
+                    <input type="text"
+                        id="Gpu"
+                        name="Gpu"
+                        placeholder="NVIDIA RTX 4060"
+                        required>
+
+                </div>
+
+
+                <!-- OPERATING SYSTEM -->
+
+                <div class="input-group">
+
+                    <label for="OpSys">Operating System</label>
+
+                    <select id="OpSys" name="OpSys" required>
+
+                        <option>Windows</option>
+                        <option>Mac</option>
+                        <option>Linux</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- WEIGHT -->
+
+                <div class="input-group">
+
+                    <label for="Weight">Weight (kg)</label>
+
+                    <input type="number"
+                        step="0.1"
+                        id="Weight"
+                        name="Weight"
+                        placeholder="2.2"
+                        required>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button type="submit">
+                    Predict Price
+                </button>
+
+            </form>
+
+
+            <!-- RESULT -->
+
+            {% if prediction_text %}
+
+            <div class="result">
+                {{ prediction_text }}
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

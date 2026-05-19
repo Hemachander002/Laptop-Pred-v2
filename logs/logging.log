@@ -2162,3 +2162,140 @@ x==========x]
 [2026-05-19 15:57:07,636: INFO: main: >>>>>>> stage Model Evaluation Stage completed <<<<<<<
 
 x==========x]
+[2026-05-19 16:38:06,903: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-05-19 16:38:06,904: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-19 16:38:06,918: INFO: _internal:  * Restarting with stat]
+[2026-05-19 16:38:07,754: WARNING: _internal:  * Debugger is active!]
+[2026-05-19 16:38:07,757: INFO: _internal:  * Debugger PIN: 679-224-107]
+[2026-05-19 16:38:11,529: INFO: _internal: 127.0.0.1 - - [19/May/2026 16:38:11] "GET / HTTP/1.1" 200 -]
+[2026-05-19 16:38:11,602: INFO: _internal: 127.0.0.1 - - [19/May/2026 16:38:11] "GET /static/style.css HTTP/1.1" 200 -]
+[2026-05-19 16:38:11,732: INFO: _internal: 127.0.0.1 - - [19/May/2026 16:38:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2026-05-19 17:37:15,855: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-05-19 17:37:15,856: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-19 17:37:15,857: INFO: _internal:  * Restarting with stat]
+[2026-05-19 17:37:16,684: WARNING: _internal:  * Debugger is active!]
+[2026-05-19 17:37:16,686: INFO: _internal:  * Debugger PIN: 679-224-107]
+[2026-05-19 17:37:19,704: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:37:19] "GET / HTTP/1.1" 200 -]
+[2026-05-19 17:37:19,772: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:37:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:38:18,799: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:38:18] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:38:18,811: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:38:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:41:58,686: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-05-19 17:41:58,687: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-19 17:41:58,688: INFO: _internal:  * Restarting with stat]
+[2026-05-19 17:41:59,516: WARNING: _internal:  * Debugger is active!]
+[2026-05-19 17:41:59,519: INFO: _internal:  * Debugger PIN: 679-224-107]
+[2026-05-19 17:42:01,549: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:42:01] "GET / HTTP/1.1" 200 -]
+[2026-05-19 17:42:01,607: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:42:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:42:34,191: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:42:34] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:42:34,200: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:42:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:45:04,943: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:45:04] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:45:04,953: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:45:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:46:24,171: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:46:24] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:46:24,181: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:46:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:48:17,571: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:48:17] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:48:17,581: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:48:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:48:48,075: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:48:48] "GET / HTTP/1.1" 200 -]
+[2026-05-19 17:48:48,105: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:48:48] "GET /static/style.css HTTP/1.1" 200 -]
+[2026-05-19 17:48:48,246: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:48:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2026-05-19 17:50:21,943: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:50:21] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:50:21,968: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:50:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:51:58,625: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:51:58] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:51:58,652: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:51:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:54:32,173: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:54:32] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:54:32,199: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:54:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:56:42,215: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2026-05-19 17:56:42,215: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2026-05-19 17:56:42,217: INFO: _internal:  * Restarting with stat]
+[2026-05-19 17:56:43,035: WARNING: _internal:  * Debugger is active!]
+[2026-05-19 17:56:43,038: INFO: _internal:  * Debugger PIN: 679-224-107]
+[2026-05-19 17:56:47,578: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:47] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:56:47,631: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:56:51,438: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:51] "POST /predict HTTP/1.1" 200 -]
+[2026-05-19 17:56:51,463: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:56:56,347: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:56] "GET / HTTP/1.1" 200 -]
+[2026-05-19 17:56:56,387: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:56:56,444: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:56:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -]
+[2026-05-19 17:57:13,374: INFO: main: >>>>>>> stage Data Ingestion Stage started <<<<<<<]
+[2026-05-19 17:57:13,378: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 17:57:13,379: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 17:57:13,381: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 17:57:13,382: INFO: common: created directory at: artifacts]
+[2026-05-19 17:57:13,382: INFO: common: created directory at: artifacts/data_ingestion]
+[2026-05-19 17:57:14,428: INFO: data_ingestion: artifacts/data_ingestion/data.csv download! with following info: 
+Access-Control-Allow-Origin: https://render.githubusercontent.com
+content-disposition: attachment; filename=datasets-main.zip
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+cross-origin-resource-policy: cross-origin
+ETag: "de84c1db40485c25e50b8b9eb0b8a35d45091a21cf556292f3de0f143561abc3"
+Strict-Transport-Security: max-age=31536000
+Vary: Authorization,Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+Date: Tue, 19 May 2026 12:27:21 GMT
+Transfer-Encoding: chunked
+X-GitHub-Request-Id: 339A:1001F6:1C3EE:BB8DE:6A0C5729
+connection: close
+
+]
+[2026-05-19 17:57:14,430: INFO: data_ingestion_pipeline: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 17:57:14,430: INFO: main: >>>>>>> stage Data Ingestion Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 17:57:14,430: INFO: main: >>>>>>> stage Data Validation Stage started <<<<<<<]
+[2026-05-19 17:57:14,434: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 17:57:14,435: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 17:57:14,437: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 17:57:14,437: INFO: common: created directory at: artifacts]
+[2026-05-19 17:57:14,438: INFO: common: created directory at: artifacts/data_validation]
+[2026-05-19 17:57:14,444: ERROR: data_validation: 'Index' object has no attribute 'lower']
+Traceback (most recent call last):
+  File "E:\PROJECT\lap price pred\src\laptop_price_prediction\components\data_validation.py", line 19, in validate_data
+    actual_columns = set(data.columns.lower())
+AttributeError: 'Index' object has no attribute 'lower'
+[2026-05-19 17:57:14,447: INFO: main: >>>>>>> stage Data Validation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 17:57:14,447: INFO: main: >>>>>>> stage Data Transformation Stage started <<<<<<<]
+[2026-05-19 17:57:14,451: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 17:57:14,452: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 17:57:14,454: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 17:57:14,454: INFO: common: created directory at: artifacts]
+[2026-05-19 17:57:14,455: INFO: common: created directory at: artifacts/data_transformation]
+[2026-05-19 17:57:14,510: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 17:57:14,562: INFO: data_transformation: Data transformation successful!]
+[2026-05-19 17:57:14,578: INFO: data_transformation: Data split successful!]
+[2026-05-19 17:57:14,578: INFO: main: >>>>>>> stage Data Transformation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 17:57:14,578: INFO: main: >>>>>>> stage Model Trainer Stage started <<<<<<<]
+[2026-05-19 17:57:14,581: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 17:57:14,583: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 17:57:14,584: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 17:57:14,585: INFO: common: created directory at: artifacts]
+[2026-05-19 17:57:14,585: INFO: common: created directory at: artifacts/model_trainer]
+[2026-05-19 17:57:14,585: INFO: model_trainer: Loading training data...]
+[2026-05-19 17:57:14,590: INFO: model_trainer: Loading testing data...]
+[2026-05-19 17:57:14,593: INFO: model_trainer: Training the XGBoost model...]
+[2026-05-19 17:57:16,127: INFO: model_trainer: Saving the trained model...]
+[2026-05-19 17:57:16,181: INFO: main: >>>>>>> stage Model Trainer Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 17:57:16,181: INFO: main: >>>>>>> stage Model Evaluation Stage started <<<<<<<]
+[2026-05-19 17:57:16,187: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2026-05-19 17:57:16,190: INFO: common: yaml file: params.yaml loaded successfully]
+[2026-05-19 17:57:16,194: INFO: common: yaml file: schema.yaml loaded successfully]
+[2026-05-19 17:57:16,195: INFO: common: created directory at: artifacts]
+[2026-05-19 17:57:16,195: INFO: common: created directory at: artifacts/model_evaluation]
+[2026-05-19 17:57:17,879: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]
+[2026-05-19 17:57:38,718: INFO: main: >>>>>>> stage Model Evaluation Stage completed <<<<<<<
+
+x==========x]
+[2026-05-19 17:57:39,054: INFO: _internal: 127.0.0.1 - - [19/May/2026 17:57:39] "GET /train HTTP/1.1" 200 -]
