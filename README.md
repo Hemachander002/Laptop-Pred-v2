@@ -130,3 +130,10 @@ Predictions closely matched actual market prices.
 - AWS / Render / Railway
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<img width="1914" height="1003" alt="orginal_lap_price" src="https://github.com/user-attachments/assets/ac68e646-b181-4fea-af31-762dcb33c434" />
+#### First Lap price
+<img width="1919" height="1079" alt="first lap price" src="https://github.com/user-attachments/assets/740eba7d-ace6-45c9-95ee-92927e22af65" />
+#### Ssecond Lap price
+<img width="1919" height="1079" alt="second lap price" src="https://github.com/user-attachments/assets/dfda1fa5-499b-4dde-b124-023337d816bf" />
+#### Third Lap price
+<img width="1919" height="1079" alt="third lap price" src="https://github.com/user-attachments/assets/ffc45a3c-d30d-4ca2-8985-606bb7d51605" />
