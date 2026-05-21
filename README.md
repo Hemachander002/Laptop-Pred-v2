@@ -131,3 +131,6 @@ Predictions closely matched actual market prices.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="1914" height="1003" alt="orginal_lap_price" src="https://github.com/user-attachments/assets/ac68e646-b181-4fea-af31-762dcb33c434" />
+<img width="1915" height="1040" alt="first lap price" src="https://github.com/user-attachments/assets/94c48836-1ea2-4876-a244-43c8bbacdd4d" />
+<img width="1915" height="1044" alt="third lap price" src="https://github.com/user-attachments/assets/6c4ec44c-e224-46bb-b2a3-0ba1d48f000f" />
+<img width="1910" height="1038" alt="second lap price" src="https://github.com/user-attachments/assets/3ce5bf8d-5107-4941-a7f5-7d0cbdfe0e02" />
